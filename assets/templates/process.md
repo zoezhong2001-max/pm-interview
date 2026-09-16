@@ -6,6 +6,9 @@
 - JD 来源：
 - 当前轮次：
 - 下一步：
+- `state-check-needed`: false
+- 最近状态确认时间：
+- 对应 Codex 对话：
 
 ## 岗位理解
 

@@ -57,7 +57,15 @@ description: >-
 - 每场面试建立独立复盘，并更新流程与 Current Plan 中的流程清单。
 - “下次具体怎么回答”写入该流程的问答；跨公司仍成立的经历答案更新 Experience Card。
 - 可复用教训先进入 Reusable Learnings。只有满足公开晋升条件时，才进入 Rule Promotion Queue。
+- 有录音时，除内容复盘外按 [review-and-archive.md](references/review-and-archive.md) 补充表达表现；把音频、转写和主观判断的证据分开，不能只凭自动转写推断语气。
+- 复盘后把真实问题与本流程准备题按 [question-forecasting.md](references/question-forecasting.md) 对照，更新下一轮题单，不以增加题量代替提高命中和追问深度。
 - 流程结束时记录最终状态并归档，不再把旧流程当作当前工作台。
+
+### 持续改进
+
+- 真实面试出现准备阶段未覆盖的重要问题、面试官明确反馈或重复失误时，主动提醒用户，并把结论路由到 Process、Reusable Learnings 或 Rule Promotion Queue。
+- 只有用户明确授权维护公开规则，且候选满足公开晋升门时，才把脱敏后的最小修订写入 skill；个人原话、公司细节和单场结论不得进入公开仓库。
+- 每次规则修订都要说明触发证据、适用边界和验证方式。外部发布仍按公开规则晋升门执行。
 
 ## 流程状态
 

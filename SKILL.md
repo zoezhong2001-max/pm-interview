@@ -59,6 +59,7 @@ description: >-
 - 可复用教训先进入 Reusable Learnings。只有满足公开晋升条件时，才进入 Rule Promotion Queue。
 - 有录音时，除内容复盘外按 [review-and-archive.md](references/review-and-archive.md) 补充表达表现；把音频、转写和主观判断的证据分开，不能只凭自动转写推断语气。
 - 复盘后把真实问题与本流程准备题按 [question-forecasting.md](references/question-forecasting.md) 对照，更新下一轮题单，不以增加题量代替提高命中和追问深度。
+- 面试官/HR 的明确反馈、真实追问与实际结果按 [feedback-loop.md](references/feedback-loop.md) 分层记录；先更新当前流程的下一轮假设，跨流程重复验证后再沉淀个人规律。公司风格只能是有来源、范围和置信度的假设，不能当成固定事实。
 - 流程结束时记录最终状态并归档，不再把旧流程当作当前工作台。
 
 ### 持续改进
@@ -107,3 +108,4 @@ description: >-
 - 提醒用户避免披露前公司机密、个人隐私和受限数据。
 - 模拟面试一次只问一题；除非用户要求即时反馈，否则结束后统一点评。
 - 多个 Codex 对话之间不假设自动共享聊天上下文；跨对话事实和状态必须先写入共同的 Hub、Profile、Current Plan 或 Process，再被其他对话复用。
+- 准备与复盘在私有知识库中使用稳定板块和链接，按 [private-store-contract.md](references/private-store-contract.md) 的写入验收核对；没有材料的板块标记“未获取/不适用”，不要编造或任意改名。

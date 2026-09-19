@@ -32,6 +32,8 @@
 4. 抽象教训更新到 Reusable Learnings。
 5. 通用规则候选只进入 Rule Promotion Queue，不自动发布。
 
+面试官/团队考察假设先留在当前 Process，附证据、范围、置信度、反例和验证计划；单场明确反馈与原始问题留在 Review。跨流程反复验证的个人应对规律才进入 Reusable Learnings，不能按公司标签直接晋升。
+
 ## 冲突处理
 
 - Profile 与口述答案冲突：以已确认事实为准，标记答案待修订。

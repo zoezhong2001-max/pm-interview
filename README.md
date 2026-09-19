@@ -25,6 +25,8 @@ GitHub skill（公开规则）
 
 在 Codex 中长期使用时，建议保留一个求职总控对话，并按“公司 × 岗位 × 批次”各建一个流程对话。同一流程的多轮面试继续使用同一对话；跨对话共享的信息必须写回唯一 Hub。详见 [`references/project-workspace.md`](references/project-workspace.md)。
 
+每轮准备和单场复盘使用固定板块，面试官/HR 反馈驱动下一轮题单与练习调整；画像是带证据和适用范围的假设，不是按公司套标签。详见 [`references/feedback-loop.md`](references/feedback-loop.md) 及准备、复盘模板。
+
 具体的数据边界和目录契约见 [`references/private-store-contract.md`](references/private-store-contract.md)。
 
 ## 仓库内容

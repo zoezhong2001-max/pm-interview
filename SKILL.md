@@ -22,6 +22,7 @@ description: >-
 3. 根据模式只加载对应参考：
    - 简历或经历整理：[resume.md](references/resume.md)
    - 系统整理实习/项目或修复经历深挖口径：[experience-cards.md](references/experience-cards.md)
+   - 用户要求 grill、拷打或分轮深挖经历：[grill-mode.md](references/grill-mode.md)，并结合已安装的 `grilling` skill
    - 面试准备或模拟：[interview-prep.md](references/interview-prep.md)
    - 面试复盘、状态更新或归档：[review-and-archive.md](references/review-and-archive.md)
    - 判断产出写到哪里：[knowledge-routing.md](references/knowledge-routing.md)

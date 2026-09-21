@@ -17,10 +17,11 @@ description: >-
 
 ## 开始工作
 
-1. 判断任务属于：简历、准备、模拟、复盘、流程管理或归档。
+1. 判断任务属于：简历、经历整理、准备、模拟、复盘、流程管理或归档。
 2. 判断是否需要用户的历史事实。需要时，按 [private-store-contract.md](references/private-store-contract.md) 定位私有知识库首页，只读取完成当前任务所需的最少材料。
 3. 根据模式只加载对应参考：
    - 简历或经历整理：[resume.md](references/resume.md)
+   - 系统整理实习/项目或修复经历深挖口径：[experience-cards.md](references/experience-cards.md)
    - 面试准备或模拟：[interview-prep.md](references/interview-prep.md)
    - 面试复盘、状态更新或归档：[review-and-archive.md](references/review-and-archive.md)
    - 判断产出写到哪里：[knowledge-routing.md](references/knowledge-routing.md)

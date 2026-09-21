@@ -19,8 +19,8 @@
 - `00 Profile`：个人事实和项目事实。
 - `01 Current Plan`：当前求职目标、节奏、限制。
 - `02 Experience Cards`：按经历组织的跨公司问答。
-- `03 Processes`：按公司、岗位和批次组织的面试流程。
-- `04 Interview Reviews`：一场一页的原始记录与复盘。
+- `03 Processes`：按公司、岗位和批次组织的轻量流程索引；保留当前岗位事实、状态和链接。
+- `04 Interview Reviews`：一场一页的结构化复盘；原始录音和用户提供的完整逐字稿作为来源附件或独立原始文档链接。
 - `05 Reusable Learnings`：仍与用户相关的跨流程教训。
 - `06 Resumes`：已冻结或已投递的简历版本。
 - `90 Rule Promotion Queue`：待脱敏、待验证、待发布的通用规则。
@@ -28,25 +28,59 @@
 
 ## 最小读取
 
-按任务读取最少资料：
+按用户旅程读取最少资料：
 
-| 任务 | 必读 | 按需读取 |
+| 旅程 | 必读 | 按需读取 |
 |---|---|---|
-| 简历 | Profile、目标 JD | Current Plan、Experience Cards、旧简历 |
-| 准备 | 当前 Process、Profile、目标 JD | Experience Cards、Current Plan |
-| 模拟 | 当前 Process、Profile | JD、Experience Cards |
-| 复盘 | 当前 Process、本场原始记录 | Profile、对应 Experience Cards |
-| 归档 | Process、相关 Reviews | Reusable Learnings、Resumes |
+| 首次使用 | 最新简历或用户已提供的事实材料 | 当前 JD、旧简历、项目材料 |
+| 已约首轮 | 当前 Process、Profile、目标 JD | 当轮会用到的 Experience Cards、Current Plan |
+| 本轮结束且继续 | 当前 Process、当轮 Round Prep、本场逐字稿 | 对应 Experience Cards、局部录音、下一轮信息 |
+| 流程关闭 | Process、最后一轮 Review 或原始记录 | Experience Cards、Reusable Learnings、Resumes |
+| Offer 决策 | 当前 Process、Current Plan、用户明确在意的维度 | 其他 Offer / Process、待询问信息 |
+| 经历修复 | 相关 Review 问题组、对应 Experience Card、Profile | 原始逐字稿片段、简历版本 |
+| 求职季结束 | Current Plan、活跃 Processes、关键 Reviews | Experience Cards、Reusable Learnings、Resumes |
 
 不要为了“更完整”而默认读取整个知识库。
 
+## 文档与上下文预算
+
+- Process 是流程主索引，不是汇总所有长文的工作台。它只保留当前状态、有效的岗位事实、经历匹配摘要、下一轮假设和各文档链接。
+- 每轮准备、每场 Review、原始逐字稿和 Experience Card 各自保留正文；其他页面只放必要摘要和反向链接。
+- 执行任务时先读 Process，再跟随当前轮次和相关经历的链接；不为检索一个结论而加载所有历史文档。
+- 用户已提供完整逐字稿时，不重新转写录音。逐字稿是内容复盘的默认证据；录音是原句校验和声学表达分析的按需证据。
+- 后续准备不默认重读完整逐字稿；应先使用 Review 中的问题组索引、时间戳和结论，只在有争议时回到对应片段。
+- 写回时只更新发生变化的事实、答案、假设、状态和下一步，不因一场新面试重写整个 Process 或全部题库。
+
+## 用户可见边界
+
+以下内容只写在 Skill 中，不写入用户飞书文档正文：
+
+- 新材料应先进入哪里、任务应读哪些页面、结果应写回哪些区域。
+- Skill 的测试阶段、建议测试顺序、验收标准、实测记录、版本维护、迁移说明和发布规则。
+- `preparing`、`closed-fail`、`state-check-needed` 等内部字段、“写回 Process / Current Plan”等代理检查清单。
+- “结构化复盘不覆盖原文”等执行原则；只需在页面上保留原始材料链接，无需向用户重复解释规则。
+
+用户页面仅保留：当前结果、必要证据、具体分析、链接和下一步。来源或不确定性影响结论时才显示，并用自然中文表达。
+
+## 稳定页面的更新语义
+
+- **Hub：** 使用 `assets/templates/hub.md`，只保留标记和分区入口，不写“默认工作流”或隐私/发布说明长文。
+- **Current Plan：** 使用 `assets/templates/current-plan.md`。当前目标和本周行动直接覆盖旧值；每个活跃流程只有一行，状态变化时就地更新，不另起“当前重点”“状态提醒”“状态更新”小节。已结束流程移至“最近结束”表，长期历史只保留归档入口。
+- **Process：** 页首的当前状态、当前轮次和下一步始终覆盖为最新值；新阶段只向“阶段历史”追加一行。岗位事实表按事实主题就地更新，被推翻的口径在备注中简短保留。旧轮次准备文档冻结，不在页尾追加新流程状态。
+- **Round Prep：** 一轮一页；面试发生后冻结为当时准备版本，只在 Process 和 Review 记录结果。下一轮新建准备页，不把一面准备、一面复盘和二面准备合并成一篇。
+- **Review：** 一场一页，实际问题和回答冻结；只允许后续补充明确反馈、本轮结果、后续流程结果和经用户确认的事实更正。不往页尾追加 Skill 实测或维护记录。
+- **Reusable Learning：** 使用 `assets/templates/reusable-learning.md`；单场证据只能形成带验证计划的“待验证”改进，至少两个独立流程支持且无关键反证后才标为“已验证”。
+- **Resume Version：** 使用 `assets/templates/resume-version.md`；每个实际投递或冻结版本一页，记录定位、主要变化、事实核对和成品链接，不把整份简历正文复制到多个流程页。
+
+收到流程进度变化时，页面和字段的具体更新按 [progress-update-routing.md](progress-update-routing.md) 执行；不得只改 Current Plan 或只改 Process 留下冲突状态。
+
 ## 数据规范
 
-每个派生产物至少记录：
+每个派生产物在内部判断中至少跟踪：
 
 - 标题和更新时间。
 - 来源链接或来源说明。
-- `confirmed`、`inferred` 或 `needs-verification`。
+- `confirmed`、`inferred` 或 `needs-verification`；面向用户默认改写为自然中文，不显示原始枚举值。
 - 所属公司、岗位、批次或经历标识（适用时）。
 - 与 Process、Review、Experience Card 或 Resume 的反向链接。
 
@@ -58,22 +92,20 @@
 
 ## 输出前事实门
 
-只要产出会复述个人事实，按以下顺序读取最新版：
+只要产出会复述个人事实，先确认字段归属：跨场景身份、任职和高风险公共口径读取 Profile；项目细节读取对应 Experience Card；岗位与流程事实读取当前 Process。再核对来源、确认时间和替代关系。
 
-1. Profile 中的事实总表。
-2. 当前 Process。
-3. 本次会使用的 Experience Card。
+三处出现冲突时，不按页面固定优先级覆盖。使用最新且来源最可靠的明确确认事实，并同步修正它应归属的主记录；仍无法判断则标记 `needs-verification`，并在交付中避免使用争议口径。面试中新确认的项目事实先更新 Experience Card；影响简历或跨场景口径时同步更新 Profile 的高风险事实索引。
 
-三处冲突时不沿用旧对话中的数字或措辞。以最新明确确认的事实为准；仍无法判断则标记 `needs-verification`，并在交付中避免使用争议口径。
-
-面试日期已经过去而 Process 仍为 `preparing` 或 `interviewing` 时，设置 `state-check-needed: true`，同步提醒 Current Plan，并请用户确认实际状态。不得自行改成通过、未通过或等待结果。
+状态新鲜度统一按 [progress-update-routing.md](progress-update-routing.md) 判断；不得因日期经过自行改成通过、未通过或等待结果。
 
 写入前读取目标页面的最新版本，尽量增量更新。遇到并发修改、结构不兼容或权限不足时停止写入，返回草稿和冲突说明。
 
 ## 准备与复盘写入验收
 
-- 每轮准备固定使用 `assets/templates/round-prep.md`；每场复盘固定使用 `assets/templates/interview-review.md`。板块顺序保持稳定，可在板块内增删内容；缺失材料标记“未获取/不适用”。
-- Review 一场一页，Process 保留阶段索引、下一轮假设和当前题单链接，不在两处复制整篇答案；Current Plan 只维护流程状态、下一步和链接。
+- Current Plan、每轮准备、Process 和每场复盘分别使用对应模板。板块顺序保持稳定，有内容才显示可选板块；不为齐全模板而输出大量“未获取/不适用”。
+- Review 一场一页，Process 保留阶段索引、下一轮假设和当前题单链接，不在两处复制整篇答案；完整逐字稿只作为 Review 的原始来源；Current Plan 只维护流程状态、下一步和链接。
+- 写入前先删除候选内容中的流程说明、维护语句、内部状态码、Skill 测试/迁移记录和代理检查清单，再验收用户真正能读到的正文。
+- 对用户可见正文做最后一次清洁检查：出现“Skill 测试/实测”“验收标准”“以后怎么流转”“迁移说明”“写回清单”“默认工作流”或裸露内部状态码时，默认删除或改写；除非用户本次明确要查看这些内部信息。
 - 写入前定位目标页并读取最新版本；写入后重新读取，逐项核对标题、场次、来源、固定板块、链接、事实/推断标记、状态和下一步。只报告确实写入成功的页面。
 - 写入失败、页面歧义或格式不兼容时，保留原页，提供按固定板块组织的草稿与待补位置；不得声称“已同步飞书”。
 
